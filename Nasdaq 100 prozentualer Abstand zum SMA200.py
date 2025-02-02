@@ -2,6 +2,7 @@ import yfinance as yf
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd
+import streamlit as st
 
 # Name des Index oder der Aktie
 ticker = "^NDX"
@@ -76,3 +77,5 @@ fig.update_xaxes(rangebreaks=[
 fig.update_xaxes(rangeslider_visible=True)
 
 fig.show()
+
+st.plotly_chart(fig)
