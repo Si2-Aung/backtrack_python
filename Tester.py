@@ -3,7 +3,6 @@ import yfinance as yf
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd
-import streamlit as st
 # Name des Index oder der Aktie
 ticker = "^NDX"
 
@@ -170,5 +169,4 @@ fig.update_yaxes(
     title_text="Value (USD)"
 )
 
-# Show plot
-st.plotly_chart(fig)
+fig.show()
